@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Modules\WmoSubsidy\Database\Factories;
+namespace Database\Factories;
 
-use App\Modules\WmoSubsidy\App\Models\CallCenter;
+use App\Models\Grant;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<CallCenter>
+ * @extends Factory<Grant>
  */
-class CallCenterFactory extends Factory
+class GrantFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,7 @@ class CallCenterFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
+            //
         ];
     }
 }

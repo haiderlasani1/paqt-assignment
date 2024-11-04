@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\WmoSubsidy\App\Models;
+namespace App\Models;
 
-use App\Modules\WmoSubsidy\Database\Factories\ParcelFactory;
+use Database\Factories\ParcelFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\WmoSubsidy\Database\Factories;
+namespace Database\Factories;
 
-use App\Modules\WmoSubsidy\App\Models\Ride;
+use App\Models\Ride;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

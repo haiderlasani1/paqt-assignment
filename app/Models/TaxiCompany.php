@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\WmoSubsidy\App\Models;
+namespace App\Models;
 
-use App\Modules\WmoSubsidy\Database\Factories\TaxiCompanyFactory;
+use Database\Factories\TaxiCompanyFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;

@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('call_centers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('municipality_id')->constrained();
             $table->timestamps();
         });
     }

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Modules\WmoSubsidy\Database\Factories;
+namespace Database\Factories;
 
-use App\Modules\WmoSubsidy\App\Models\TaxiCompany;
+use App\Models\Parcel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<TaxiCompany>
+ * @extends Factory<Parcel>
  */
-class TaxiCompanyFactory extends Factory
+class ParcelFactory extends Factory
 {
     /**
      * Define the model's default state.

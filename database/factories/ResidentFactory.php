@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Modules\WmoSubsidy\Database\Factories;
+namespace Database\Factories;
 
-use App\Modules\WmoSubsidy\App\Models\Grant;
+use App\Models\Resident;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Grant>
+ * @extends Factory<Resident>
  */
-class GrantFactory extends Factory
+class ResidentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,8 @@ class GrantFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'address' => $this->faker->address,
         ];
     }
 }
