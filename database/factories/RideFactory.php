@@ -18,7 +18,8 @@ class RideFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'destination' => $this->faker->address,
+            'distance' => $this->faker->randomFloat(2, 1, 100),
         ];
     }
 }
