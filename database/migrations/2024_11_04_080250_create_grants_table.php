@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->integer('budget');
             $table->integer('remaining_budget')->default(0);
             $table->foreignId('resident_id')->constrained();
-            $table->string('status', 20);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

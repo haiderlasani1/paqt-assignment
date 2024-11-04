@@ -12,12 +12,12 @@ class Grant extends Model
     /** @use HasFactory<GrantFactory> */
     use HasFactory;
 
-    protected $fillable = ['budget', 'remaining_budget', 'status'];
+    protected $fillable = ['budget', 'remaining_budget', 'is_active'];
 
-    protected function casts()
+    protected function casts(): array
     {
         return [
-            'status' => GrantStatusEnum::class,
+            'is_active' => 'boolean'
         ];
     }
 }
