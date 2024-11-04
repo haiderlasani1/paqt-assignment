@@ -2,17 +2,17 @@
 
 namespace App\Models;
 
-use Database\Factories\GrantFactory;
+use Database\Factories\BudgetFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Grant extends Model
+class Budget extends Model
 {
-    /** @use HasFactory<GrantFactory> */
+    /** @use HasFactory<BudgetFactory> */
     use HasFactory;
 
-    protected $fillable = ['budget', 'remaining_budget', 'active_until'];
+    protected $fillable = ['value', 'remaining', 'active_until', 'taxi_company_id'];
 
     public function resident(): BelongsTo
     {
@@ -22,7 +22,7 @@ class Grant extends Model
     protected function casts(): array
     {
         return [
-            'is_active' => 'boolean',
+            'active_until' => 'date',
         ];
     }
 }

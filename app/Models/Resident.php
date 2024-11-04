@@ -26,9 +26,9 @@ class Resident extends Model
         return $this->belongsTo(Parcel::class);
     }
 
-    public function grant(): HasOne
+    public function budget(): HasOne
     {
-        return $this->hasOne(Grant::class);
+        return $this->hasOne(Budget::class);
     }
 
     public function rides(): HasMany

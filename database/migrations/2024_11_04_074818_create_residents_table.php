@@ -14,7 +14,7 @@ return new class extends Migration
             // Note: Normally this would be an Address Object, just keeping it super simple
             $table->string('address');
             $table->foreignId('municipality_id')->constrained();
-            $table->foreignId('parcel_id')->nullable();
+            $table->foreignId('parcel_id')->constrained();
             $table->timestamps();
         });
     }

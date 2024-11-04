@@ -11,8 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__ . '/../routes/console.php',
         health: '/up',
         then: function () {
-            // Route::middleware(['api', 'auth:sanctum']) can be set for authentication
-            Route::prefix('api/v1')
+            // Note: Route::middleware(['auth:sanctum']) can be set for authentication
+            Route::middleware(['api'])
+                ->prefix('api/v1')
                 ->name('v1.')
                 ->group(base_path('routes/api_v1.php'));
         }
