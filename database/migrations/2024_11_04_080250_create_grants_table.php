@@ -4,10 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
+return new class extends Migration
+{
     public function up(): void
     {
         Schema::create('grants', function (Blueprint $table) {
@@ -15,14 +13,11 @@ return new class extends Migration {
             $table->integer('budget');
             $table->integer('remaining_budget')->default(0);
             $table->foreignId('resident_id')->constrained();
-            $table->boolean('is_active')->default(true);
+            $table->timestamp('active_until');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('grants');

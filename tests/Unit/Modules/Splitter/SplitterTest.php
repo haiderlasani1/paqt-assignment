@@ -3,7 +3,7 @@
 use App\Modules\Splitter\Splitter;
 
 it('splits the list into sublists of the given length while preserving keys', function () {
-    $splitter = new Splitter();
+    $splitter = new Splitter;
     $list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     $length = 3;
 
@@ -18,7 +18,7 @@ it('splits the list into sublists of the given length while preserving keys', fu
 });
 
 it('handles an empty list and returns an empty array', function () {
-    $splitter = new Splitter();
+    $splitter = new Splitter;
     $list = [];
     $length = 3;
 
@@ -29,7 +29,7 @@ it('handles an empty list and returns an empty array', function () {
 });
 
 it('handles length greater than the list size', function () {
-    $splitter = new Splitter();
+    $splitter = new Splitter;
     $list = [1, 2];
     $length = 5;
 

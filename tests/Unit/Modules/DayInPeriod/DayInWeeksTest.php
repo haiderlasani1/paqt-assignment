@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Modules\DayInPeriod\MondayInWeek;
 use Carbon\Carbon;
 
@@ -15,7 +14,7 @@ it('returns Mondays with week numbers of the year', function () {
     expect($result)->toBeArray()
         ->and($result)->toBe([
             '1 week 2025' => '2024-12-30',
-            '2 week 2025' => '2025-01-06'
+            '2 week 2025' => '2025-01-06',
         ]);
 });
 

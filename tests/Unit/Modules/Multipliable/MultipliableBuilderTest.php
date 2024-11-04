@@ -1,11 +1,10 @@
 <?php
 
-
 use App\Modules\Multipliable\MultipliableBuilder;
 use App\Modules\Multipliable\MultipliableContract;
 
 it('returns an array of MultipliableContract instances', function () {
-    $builder = new MultipliableBuilder();
+    $builder = new MultipliableBuilder;
     $multipliables = $builder->fromStaticValues();
 
     expect($multipliables)->toBeArray()

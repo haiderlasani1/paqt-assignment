@@ -1,8 +1,7 @@
 <?php
 
-
-use App\Modules\Multipliable\MultipliableContract;
 use App\Modules\Multipliable\Multipliable;
+use App\Modules\Multipliable\MultipliableContract;
 
 it('implements the MultipliableContract and returns correct number and value', function () {
     $multipliable = new Multipliable(3, 'Fizz');

@@ -4,7 +4,7 @@ namespace App\Modules\Multipliable;
 
 readonly class MultipliableChecker
 {
-    /** @var $multipliables MultipliableContract[] */
+    /** @var MultipliableContract[] */
     private array $multipliables;
 
     public function __construct(array $multipliable)

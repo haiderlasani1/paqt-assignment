@@ -4,7 +4,6 @@ namespace App\Modules\DayInPeriod;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use Carbon\CarbonPeriod;
 
 class MondayInWeek extends DayInWeeks
 {

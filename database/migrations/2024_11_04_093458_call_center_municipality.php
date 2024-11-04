@@ -8,15 +8,16 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('taxi_companies', function (Blueprint $table) {
+        Schema::create('call_center_municipality', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->foreignId('call_center_id')->constrained()->onDelete('cascade');
+            $table->foreignId('municipality_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('taxi_companies');
+        Schema::dropIfExists('call_center_municipality');
     }
 };
