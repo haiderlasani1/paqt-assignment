@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace App\Modules\WmoSubsidy\Database\Factories;
 
 use App\Modules\WmoSubsidy\App\Models\Municipality;
 use Illuminate\Database\Eloquent\Factories\Factory;

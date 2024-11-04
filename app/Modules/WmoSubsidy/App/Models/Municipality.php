@@ -2,7 +2,7 @@
 
 namespace App\Modules\WmoSubsidy\App\Models;
 
-use Database\Factories\MunicipalityFactory;
+use App\Modules\WmoSubsidy\Database\Factories\MunicipalityFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

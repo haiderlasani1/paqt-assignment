@@ -5,7 +5,7 @@ namespace App\Modules\WmoSubsidy\App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class MunicipalityResource extends JsonResource
+class GrantResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

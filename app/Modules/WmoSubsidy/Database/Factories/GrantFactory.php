@@ -1,14 +1,14 @@
 <?php
 
-namespace Database\Factories;
+namespace App\Modules\WmoSubsidy\Database\Factories;
 
-use App\Modules\WmoSubsidy\App\Models\Resident;
+use App\Modules\WmoSubsidy\App\Models\Grant;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Resident>
+ * @extends Factory<Grant>
  */
-class ResidentFactory extends Factory
+class GrantFactory extends Factory
 {
     /**
      * Define the model's default state.

@@ -10,12 +10,12 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('residents', function (Blueprint $table) {
+        Schema::create('grants', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            // Note: Normally this would be an object, just keeping it super simple
-            $table->string('address');
-            $table->foreignId('municipality_id')->constrained();
+            $table->integer('budget');
+            $table->integer('remaining_budget')->default(0);
+            $table->foreignId('resident_id')->constrained();
+            $table->string('status', 20);
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('residents');
+        Schema::dropIfExists('grants');
     }
 };
