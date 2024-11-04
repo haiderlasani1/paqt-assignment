@@ -19,6 +19,7 @@ class BudgetFactory extends Factory
     public function definition(): array
     {
         $value = $this->faker->randomFloat(2, 0, 1000);
+
         return [
             'value' => $value,
             'remaining' => $value,

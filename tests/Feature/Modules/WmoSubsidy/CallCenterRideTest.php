@@ -17,11 +17,11 @@ it('can book ride for a resident of municipality', function () {
     ]);
     $parcel = Parcel::factory()->create([
         'municipality_id' => $municipality->id,
-        'taxi_company_id' => TaxiCompany::factory()->create()
+        'taxi_company_id' => TaxiCompany::factory()->create(),
     ]);
     $resident = Resident::factory()->create([
         'municipality_id' => $municipality->id,
-        'parcel_id' => $parcel->id
+        'parcel_id' => $parcel->id,
     ]);
     Budget::factory()->create([
         'resident_id' => $resident->id,

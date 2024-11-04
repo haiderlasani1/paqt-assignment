@@ -16,8 +16,8 @@ class CallCenterResidentsController extends Controller
 
         // NOTE: This could be a repository injected in the constructor
         $resident = Resident::whereHas('municipality',
-            fn($query) => $query->whereHas('callCenter',
-                fn($query) => $query->where('id', $callCenter->id)))->paginate(15);
+            fn ($query) => $query->whereHas('callCenter',
+                fn ($query) => $query->where('id', $callCenter->id)))->paginate(15);
 
         // NOTE: Response can be more specific on application level
         return ResidentResource::collection($resident);

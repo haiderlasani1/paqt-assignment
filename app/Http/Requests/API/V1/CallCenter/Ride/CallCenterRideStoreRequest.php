@@ -17,14 +17,14 @@ class CallCenterRideStoreRequest extends FormRequest
     {
         $callCenter = $this->route('callCenter');
         $residentId = $this->input('resident_id');
+
         return [
             'destination' => 'required|string|max:255',
-            'distance' =>
-                ['required',
-                    'numeric',
-                    'min:1',
-                    new ResidentBudgetRule($residentId),
-                ],
+            'distance' => ['required',
+                'numeric',
+                'min:1',
+                new ResidentBudgetRule($residentId),
+            ],
             'resident_id' => [
                 'required',
                 'integer',

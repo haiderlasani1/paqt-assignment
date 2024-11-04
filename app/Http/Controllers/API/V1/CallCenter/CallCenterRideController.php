@@ -4,12 +4,9 @@ namespace App\Http\Controllers\API\V1\CallCenter;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\V1\CallCenter\Ride\CallCenterRideStoreRequest;
-use App\Http\Resources\V1\ResidentResource;
 use App\Http\Resources\V1\RideResource;
 use App\Models\CallCenter;
 use App\Models\Resident;
-use App\Models\Ride;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class CallCenterRideController extends Controller
 {

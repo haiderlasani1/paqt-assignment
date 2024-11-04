@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Models\CallCenter;
 use App\Models\Municipality;
 use App\Models\Resident;

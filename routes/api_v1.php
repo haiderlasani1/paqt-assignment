@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\API\V1\{CallCenter\CallCenterResidentsController, CallCenter\CallCenterRideController};
+use App\Http\Controllers\API\V1\CallCenter\CallCenterResidentsController;
+use App\Http\Controllers\API\V1\CallCenter\CallCenterRideController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('call-centers')->group(function () {
-    Route::apiResource('/{callCenter}/residents', CallCenterResidentsController::class)
+    Route::apiResource('{callCenter}/residents', CallCenterResidentsController::class)
         ->only(['index']);
 });
 
