@@ -14,6 +14,7 @@ return new class extends Migration
             $table->integer('remaining');
             $table->foreignId('resident_id')->constrained();
             $table->date('active_until');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
