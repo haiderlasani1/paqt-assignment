@@ -13,6 +13,10 @@ class DayInWeeks
 
     public function get(): array
     {
+        if ($this->startDate->greaterThan($this->endDate)) {
+            return []; // Can also be a custom exception
+        }
+
         $startDate = $this->startDate->copy()->next($this->startWeek);
         $endDate = $this->endDate->copy()->previous($this->endWeek);
 
