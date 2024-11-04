@@ -10,13 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('residents', function (Blueprint $table) {
+        Schema::create('parcels', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            // Note: Normally this would be an Address Object, just keeping it super simple
-            $table->string('address');
+            $table->foreignId('taxi_company_id')->constrained();
             $table->foreignId('municipality_id')->constrained();
-            $table->foreignId('parcel_id')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('residents');
+        Schema::dropIfExists('parcels');
     }
 };
